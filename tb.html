@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title> Video </title>
+   <link rel="stylesheet" href="final.css">
+    <link rel= "icon" href="128.png">
+    
+
+<link rel="stylesheet" href="final.css" media="print">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="myFunction()">
+<header>
+
+  <h1>Safe Drive</h1>
+  </header>
+  
+ 
+      
+        <nav>
+    <ul class="sidenav">
+  <li><a class="active" href="final.html">Home</a></li>
+  <li><a href="why.html">Why drive safe</a></li>
+  <li><a class="highlight" href="tb.html">Upload a video</a></li>
+  <li><a href="form.html">Register for Drive Safe</a></li>
+     <li><a href="tip.html">Driving tips</a></li>
+  <li><a href="app.html">Drive safe mobile app</a></li>
+  <li><a href="https://www.dmv.org/travel/us-road-rules.php">DMV</a></li>
+  <li><a href="feed.html">Feedback</a></li>
+</ul>
+</nav>
+<h1>Traffic Violation Video </h1>
+
+<h3>You can buy dashboard cameras for your vehicle.<a href="https://www.amazon.com/Dashboard-Camera-Accident-Recorder-Vehicles/dp/B01H0EYXWO"> Click here </a>to buy from Amazon</h3>
+<h3>Learn how to install a dashboard camera<a href="https://www.youtube.com/watch?v=xwD8Ilk-MHU"> click here. </a></h3>
+
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c6T6PThWrP0" allowfullscreen></iframe>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OybKO1y_mAI"  allowfullscreen></iframe>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OybKO1y_mAI"  allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OybKO1y_mAI"  allowfullscreen></iframe>
+
+<input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+<p id="demo"></p>
+    
+<script>
+function myFunction(){
+    var x = document.getElementById("myFile");
+    var txt = "";
+    if ('files' in x) {
+        if (x.files.length == 0) {
+            txt = "Select one or more files.";
+        } else {
+            for (var i = 0; i < x.files.length; i++) {
+                txt += "<br><strong>" + (i+1) + ". file</strong><br>";
+                var file = x.files[i];
+                if ('name' in file) {
+                    txt += "name: " + file.name + "<br>";
+                }
+                if ('size' in file) {
+                    txt += "size: " + file.size + " bytes <br>";
+                }
+            }
+        }
+    } 
+    else {
+        if (x.value == "") {
+            txt += "Select one or more files.";
+        } else {
+            txt += "The files property is not supported by your browser!";
+            txt  += "<br>The path of the selected file: " + x.value; // If the browser does not support the files property, it will return the path of the selected file instead. 
+        }
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+<footer>
+    
+  <p>Posted by: Sula Jayasekara</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a>.</p>
+</footer>
+</body>
+</html>    
